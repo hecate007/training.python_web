@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from cStringIO import StringIO
 from echo_client import client
 import socket
