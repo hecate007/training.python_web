@@ -41,14 +41,13 @@ def parse_request(request):
 
 def resolve_uri(uri):
     fullPath = 'webroot/%s' % uri
-    print fullPath
     if not path.exists(fullPath):
-        raise IOError
+        raise ValueError
     if path.isdir(fullPath):
-        return ['text/plain','\r\n'.join(os.listdir(fullPath))]
+        return ['\r\n'.join(os.listdir(fullPath)),'text/plain']
     elif path.isfile(fullPath):
         mType = mimetypes.guess_type(fullPath)
-        return [mType[0],open(fullPath,'rb').read()]
+        return [open(fullPath,'rb').read(),mType[0]]
 
 def server():
     address = ('127.0.0.1', 10000)
@@ -77,10 +76,8 @@ def server():
                     response = response_ok(body,mType)
                 except NotImplementedError:
                     response = response_method_not_allowed()
-                except IOError:
+                except ValueError:
                     response = response_not_found()
-                else:
-                    response = response_ok()
 
                 print >>sys.stderr, 'sending response'
                 conn.sendall(response)
