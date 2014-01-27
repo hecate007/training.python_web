@@ -1,6 +1,28 @@
+#!/usr/bin/env python
+
 import socket
 import sys
 
+def response_ok():
+    retVal = []
+    retVal.append('HTTP/1.1 200 OK')
+    retVal.append('Content-Type: text/plain')
+    retVal.append('')
+    retVal.append('this is pretty minimal response')
+    return '\r\n'.join(retVal)
+
+def response_method_not_allowed():
+    retVal = []
+    retVal.append('HTTP/1.1 405 Method Not Allowed')
+    retVal.append('')
+    return '\r\n'.join(retVal)
+
+def parse_request(request):
+
+    method, uri, prot = request.split('\r\n',1)[0].split()
+    if method != 'GET':
+        raise NotImplementedError('Only processes GET request')
+    print >>sys.stderr, 'request is okay'
 
 def server(log_buffer=sys.stderr):
     address = ('127.0.0.1', 10000)
@@ -16,17 +38,20 @@ def server(log_buffer=sys.stderr):
             conn, addr = sock.accept() # blocking
             try:
                 print >>log_buffer, 'connection - {0}:{1}'.format(*addr)
+                request = ''
                 while True:
-                    data = conn.recv(16)
+                    data = conn.recv(1024)
+                    request += data
                     print >>log_buffer, 'received "{0}"'.format(data)
-                    if data:
-                        msg = 'sending data back to client'
-                        print >>log_buffer, msg
-                        conn.sendall(data)
-                    else:
-                        msg = 'no more data from {0}:{1}'.format(*addr)
-                        print >>log_buffer, msg
+                    if len(data) < 1024:
                         break
+                print >>log_buffer, 'sending response'
+                try:
+                    parse_request(request)
+                    response = response_ok()
+                except NotImplementedError:
+                    response = response_method_not_allowed()
+                conn.sendall(response)
             finally:
                 conn.close()
             

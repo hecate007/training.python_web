@@ -28,9 +28,9 @@ Licensed with Creative Commons BY-NC-SA
 
 .. class:: small incremental
 
-* You must attribute the work
-* You may not use the work for commercial purposes
-* You have to share your versions just like this one
+1. You must attribute the work
+2. You may not use the work for commercial purposes
+3. You have to share your versions just like this one
 
 .. class:: incremental
 
@@ -48,10 +48,10 @@ Questions to ask:
 
 .. class:: incremental
 
-* What did you just say?
-* Please explain what we just did again?
-* Why didn't that work for me?
-* Is that a typo?
+4. What did you just say?
+5. Please explain what we just did again?
+6. Why didn't that work for me?
+7. Is that a typo?
 
 
 But First
@@ -65,13 +65,13 @@ Questions **not** to ask:
 
 .. class:: incremental
 
-* **Hypotheticals**: What happens if I do X?
-* **Research**: Can Python do Y?
-* **Syllabus**: Are we going to cover Z in class?
-* **Marketing questions**: please just don't.
-* **Performance questions**: Is Python fast enough?
-* **Unpythonic**: Why doesn't Python do it some other way?
-* **Show off**: Look what I just did!
+8. **Hypotheticals**: What happens if I do X?
+9. **Research**: Can Python do Y?
+10. **Syllabus**: Are we going to cover Z in class?
+11. **Marketing questions**: please just don't.
+12. **Performance questions**: Is Python fast enough?
+13. **Unpythonic**: Why doesn't Python do it some other way?
+14. **Show off**: Look what I just did!
 
 
 But First
@@ -91,13 +91,13 @@ Computer Communications
 
 .. class:: incremental
 
-* processes can communicate
+15. processes can communicate
 
-* inside one machine
+16. inside one machine
 
-* between two machines
+17. between two machines
 
-* among many machines
+18. among many machines
 
 .. class:: image-credit
 
@@ -113,13 +113,13 @@ Computer Communications
 
 .. class:: incremental
 
-* Process divided into 'layers'
+19. Process divided into 'layers'
 
-* 'Layers' are mostly arbitrary
+20. 'Layers' are mostly arbitrary
 
-* Different descriptions have different layers
+21. Different descriptions have different layers
 
-* Most common is the 'TCP/IP Stack'
+22. Most common is the 'TCP/IP Stack'
 
 .. class:: image-credit
 
@@ -133,15 +133,15 @@ The bottom layer is the 'Link Layer'
 
 .. class:: incremental
 
-* Deals with the physical connections between machines, 'the wire'
+23. Deals with the physical connections between machines, 'the wire'
 
-* Packages data for physical transport
+24. Packages data for physical transport
 
-* Executes transmission over a physical medium
+25. Executes transmission over a physical medium
 
-  * what that medium is is arbitrary
+  26. what that medium is is arbitrary
 
-* Implemented in the Network Interface Card(s) (NIC) in your computer
+27. Implemented in the Network Interface Card(s) (NIC) in your computer
 
 
 The TCP/IP Stack - Internet
@@ -151,21 +151,21 @@ Moving up, we have the 'Internet Layer'
 
 .. class:: incremental
 
-* Deals with addressing and routing
+28. Deals with addressing and routing
 
-  * Where are we going and how do we get there?
+  29. Where are we going and how do we get there?
 
-* Agnostic as to physical medium (IP over Avian Carrier - IPoAC)
+30. Agnostic as to physical medium (IP over Avian Carrier - IPoAC)
 
-* Makes no promises of reliability
+31. Makes no promises of reliability
 
-* Two addressing systems
+32. Two addressing systems
 
   .. class:: incremental
 
-  * IPv4 (current, limited '192.168.1.100')
+  33. IPv4 (current, limited '192.168.1.100')
 
-  * IPv6 (future, 3.4 x 10^38 addresses, '2001:0db8:85a3:0042:0000:8a2e:0370:7334')
+  34. IPv6 (future, 3.4 x 10^38 addresses, '2001:0db8:85a3:0042:0000:8a2e:0370:7334')
 
 
 The TCP/IP Stack - Internet
@@ -183,23 +183,23 @@ Next up is the 'Transport Layer'
 
 .. class:: incremental
 
-* Deals with transmission and reception of data
+35. Deals with transmission and reception of data
 
-  * error correction, flow control, congestion management
+  36. error correction, flow control, congestion management
 
-* Common protocols include TCP & UDP
+37. Common protocols include TCP & UDP
 
-  * TCP: Tranmission Control Protocol
+  38. TCP: Tranmission Control Protocol
 
-  * UDP: User Datagram Protocol
+  39. UDP: User Datagram Protocol
 
-* Not all Transport Protocols are 'reliable'
+40. Not all Transport Protocols are 'reliable'
 
   .. class:: incremental
 
-  * TCP ensures that dropped packets are resent
+  41. TCP ensures that dropped packets are resent
 
-  * UDP makes no such assurance
+  42. UDP makes no such assurance
   
   * Reliability is slow and expensive
 
@@ -211,13 +211,13 @@ The 'Transport Layer' also establishes the concept of a **port**
 
 .. class:: incremental
 
-* IP Addresses designate a specific *machine* on the network
+43. IP Addresses designate a specific *machine* on the network
 
-* A **port** provides addressing for individual *applications* in a single host
+44. A **port** provides addressing for individual *applications* in a single host
 
-* 192.168.1.100:80  (the *:80* part is the **port**)
+45. 192.168.1.100:80  (the *:80* part is the **port**)
 
-* [2001:db8:85a3:8d3:1319:8a2e:370:7348]:443 (*:443* is the **port**)
+46. [2001:db8:85a3:8d3:1319:8a2e:370:7348]:443 (*:443* is the **port**)
 
 .. class:: incremental
 
@@ -233,12 +233,12 @@ applications or protocols:
 
 .. class:: incremental
 
-* 80/443 - HTTP/HTTPS
-* 20 - FTP
-* 22 - SSH
-* 23 - Telnet
-* 25 - SMTP
-* ...
+47. 80/443 - HTTP/HTTPS
+48. 20 - FTP
+49. 22 - SSH
+50. 23 - Telnet
+51. 25 - SMTP
+52. ...
 
 .. class:: incremental
 
@@ -256,13 +256,13 @@ Ports are grouped into a few different classes
 
 .. class:: incremental
 
-* Ports numbered 0 - 1023 are *reserved*
+53. Ports numbered 0 - 1023 are *reserved*
 
-* Ports numbered 1024 - 65535 are *open*
+54. Ports numbered 1024 - 65535 are *open*
 
-* Ports numbered 1024 - 49151 may be *registered*
+55. Ports numbered 1024 - 49151 may be *registered*
 
-* Ports numbered 49152 - 65535 are called *ephemeral*
+56. Ports numbered 49152 - 65535 are called *ephemeral*
 
 
 The TCP/IP Stack - Application
@@ -272,15 +272,15 @@ The topmost layer is the 'Application Layer'
 
 .. class:: incremental
 
-* Deals directly with data produced or consumed by an application
+57. Deals directly with data produced or consumed by an application
 
-* Reads or writes data using a set of understood, well-defined **protocols**
+58. Reads or writes data using a set of understood, well-defined **protocols**
 
-  * HTTP, SMTP, FTP etc.
+  59. HTTP, SMTP, FTP etc.
 
-* Does not know (or need to know) about lower layer functionality
+60. Does not know (or need to know) about lower layer functionality
 
-  * The exception to this rule is **endpoint** data (or IP:Port)
+  61. The exception to this rule is **endpoint** data (or IP:Port)
 
 
 The TCP/IP Stack - Application
@@ -298,13 +298,13 @@ Think back for a second to what we just finished discussing, the TCP/IP stack.
 
 .. class:: incremental
 
-* The *Internet* layer gives us an **IP Address**
+62. The *Internet* layer gives us an **IP Address**
 
-* The *Transport* layer establishes the idea of a **port**.
+63. The *Transport* layer establishes the idea of a **port**.
 
-* The *Application* layer doesn't care about what happens below...
+64. The *Application* layer doesn't care about what happens below...
 
-* *Except for* **endpoint data** (IP:Port)
+65. *Except for* **endpoint data** (IP:Port)
 
 .. class:: incremental
 
@@ -468,9 +468,9 @@ stack.  There were a couple of different types of IP addresses:
 
 .. class:: incremental
 
-* IPv4 ('192.168.1.100')
+66. IPv4 ('192.168.1.100')
 
-* IPv6 ('2001:0db8:85a3:0042:0000:8a2e:0370:7334')
+67. IPv6 ('2001:0db8:85a3:0042:0000:8a2e:0370:7334')
 
 .. class:: incremental
 
@@ -507,14 +507,14 @@ Sockets. Sockets in this family:
 
 .. class:: incremental
 
-* connect processes **on the same machine**
+68. connect processes **on the same machine**
 
-* are generally a bit slower than IPC connnections
+69. are generally a bit slower than IPC connnections
 
-* have the benefit of allowing the same API for programs that might run on one
+70. have the benefit of allowing the same API for programs that might run on one
   machine __or__ across the network
 
-* use an 'address' that looks like a pathname ('/tmp/foo.sock')
+71. use an 'address' that looks like a pathname ('/tmp/foo.sock')
 
 
 Test your skills
@@ -606,9 +606,9 @@ So far we have:
 
 .. class:: incremental
 
-* learned about the "layers" of the TCP/IP Stack
-* discussed *families*, *types* and *protocols* in sockets
-* learned how to create sockets with a specific communications profile.
+72. learned about the "layers" of the TCP/IP Stack
+73. discussed *families*, *types* and *protocols* in sockets
+74. learned how to create sockets with a specific communications profile.
 
 .. class:: incremental
 
@@ -658,11 +658,11 @@ host. The value returned is a tuple of:
 
 .. class:: incremental
 
-* socket family
-* socket type
-* socket protocol
-* canonical name (usually empty, unless requested by flag)
-* socket address (tuple of IP and Port)
+75. socket family
+76. socket type
+77. socket protocol
+78. canonical name (usually empty, unless requested by flag)
+79. socket address (tuple of IP and Port)
 
 
 A quick utility method
@@ -771,11 +771,11 @@ Once the socket is constructed with the appropriate *family*, *type* and
 
 .. class:: incremental
 
-* a successful connection returns ``None``
+80. a successful connection returns ``None``
 
-* a failed connection raises an error
+81. a failed connection raises an error
 
-* you can use the *type* of error returned to tell why the connection failed.
+82. you can use the *type* of error returned to tell why the connection failed.
 
 
 Sending a Message
@@ -791,15 +791,15 @@ learn in session 2 about the message we are sending)::
 
 .. class:: incremental small
 
-* the transmission continues until all data is sent or an error occurs
+83. the transmission continues until all data is sent or an error occurs
 
-* success returns ``None``
+84. success returns ``None``
 
-* failure to send raises an error
+85. failure to send raises an error
 
-* you can use the type of error to figure out why the transmission failed
+86. you can use the type of error to figure out why the transmission failed
 
-* if an error occurs you **cannot** know how much, if any, of your data was
+87. if an error occurs you **cannot** know how much, if any, of your data was
   sent
 
 
@@ -816,11 +816,11 @@ back out (again, **do not type this yet**)::
 
 .. class:: incremental small
 
-* The sole required argument is ``buffer_size`` (an integer). It should be a
+88. The sole required argument is ``buffer_size`` (an integer). It should be a
   power of 2 and smallish (~4096)
-* It returns a byte string of ``buffer_size`` (or smaller if less data was
+89. It returns a byte string of ``buffer_size`` (or smaller if less data was
   received)
-* If the response is longer than ``buffer size``, you can call the method
+90. If the response is longer than ``buffer size``, you can call the method
   repeatedly. The last bunch will be less than ``buffer size``.
 
 
@@ -921,12 +921,12 @@ connections::
 
 .. class:: incremental
 
-* The argument to ``listen`` is the *backlog*
+91. The argument to ``listen`` is the *backlog*
 
-* The *backlog* is the **maximum** number of connection requests that the
+92. The *backlog* is the **maximum** number of connection requests that the
   socket will queue
 
-* Once the limit is reached, the socket refuses new connections.
+93. Once the limit is reached, the socket refuses new connections.
 
 
 Accept Incoming Messages
