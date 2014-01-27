@@ -1,0 +1,42 @@
+this will print the top 20 ski resorts and their closest hospital. you can pass in a single location argument like "washington state" or "canada". if you do not pass in an argument, then the default location is "united states"
+
+example.  ./leblanc_mashup.py "washington state"
+
+output:
+
+(soupenv)adam@adam-UL50VT:~/Python_Course/Python_200/assignments/session03$ ./leblanc_mashup.py "washington state"
+looking for ski resorts in washington state
+results
+
+Ski Resort:
+	Name: Stevens Pass
+	Address: South 2 Street, Skykomish, Washington, United States
+	Lat: 47.74443  Lon: -121.089282
+	Closest Hospital:
+		Name: Cascade Medical Center
+		Address: 817 Commercial Street, Leavenworth, WA, United States
+		Distance: 35.30 miles
+
+
+Ski Resort:
+	Name: White Pass
+	Address: 48935 U.S. 12, Naches, WA, United States
+	Lat: 46.637501  Lon: -121.390556
+	Closest Hospital:
+		Name: Women's Health Network
+		Address: 2205 West Lincoln Avenue, Yakima, WA, United States
+		Distance: 51.39 miles
+
+
+Ski Resort:
+	Name: Mission Ridge Ski & Board Resort
+	Address: 7500 Mission Ridge Road, Wenatchee, WA, United States
+	Lat: 47.292446  Lon: -120.399771
+	Closest Hospital:
+		Name: Central Washington Hospital
+		Address: 1201 South Miller Street, Wenatchee, WA, United States
+		Distance: 12.93 miles
+
+....
+....
+....
