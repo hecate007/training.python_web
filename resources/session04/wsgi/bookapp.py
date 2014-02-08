@@ -46,6 +46,10 @@ def resolve_path(path):
 
 
 def application(environ, start_response):
+<<<<<<< HEAD
+=======
+    status = "200 OK"
+>>>>>>> upstream/master
     headers = [('Content-type', 'text/html')]
     try:
         path = environ.get('PATH_INFO',None)

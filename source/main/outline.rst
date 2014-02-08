@@ -34,12 +34,12 @@ Session 2 - Web Protocols
 -------------------------
 
 Protocols are the languages of the Internet. They govern how machines speak to
-one-another. We will focus on finding both the similarities and differences
+one another. We will focus on finding both the similarities and differences
 between protocols. Can you use the inherent qualities of each to determine
 which is appropriate for a given purpose?
 
 Along the way, we'll build a simple web server. Using the HTTP protocol and
-extending what we learned in the morning about we'll create an HTTP server
+extending what we learned in the previous session we'll create an HTTP server
 that allows us to serve files and directories from our own computers. By the
 end of the day, you'll be browsing your filesystem with your own web browser.
 
@@ -79,7 +79,8 @@ to help extract information from the sea of HTML in the wild.
 Along the way, we'll create a mashup of our own, using the tools we learn to
 build a script that can produce derived meaning out of data we find online.
 
-`Lecture Slides <presentations/session03.html>`_
+* `Lecture Slides <presentations/session03.html>`_
+* `As Plain HTML <presentations/session03-plain.html>`_
 
 References
 **********
@@ -105,7 +106,8 @@ Services Gateway Interface). We'll see the ways in which WSGI is similar to
 CGI, and look at the ways in which it differs. We'll create a simple interaction
 using WSGI and see what benefits and drawbacks it confers.
 
-`Lecture Slides <presentations/session04.html>`_
+* `Lecture Slides <presentations/session04.html>`_
+* `As Plain HTML <presentations/session04-plain.html>`_
 
 
 Session 5 - Frameworks and Flask
@@ -237,7 +239,7 @@ tests that cover the functionality we want and then writing the code to make
 them pass. 
 
 By the end of the session, you'll have a fully functional wiki you can play
-with. Maybe you'll use it to track the information you leared about Python
+with. Maybe you'll use it to track the information you learned about Python
 Web Development.
 
 `Lecture Slides <presentations/session10.html>`_
