@@ -5,9 +5,22 @@
     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>My Microblog</h1>
+    {% if loggedin %}
+        <h1>My Microblog        <small>{{currentuser}}</small>    <a href="{{ url_for('logout') }}"><small>Logout</small></a></h1>
+    {% else %}
+        <h1>My Microblog     <a href="{{ url_for('login') }}"><small>Login</small></a></h1>
+    {% endif %}
     <div class="content">
     {% block body %}{% endblock %}
     </div>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
   </body>
 </html>
